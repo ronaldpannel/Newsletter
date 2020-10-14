@@ -1,0 +1,222 @@
+body {
+  font-family: "Karla", sans-serif;
+  padding: 0;
+  margin: 0px;
+}
+.wrapper-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: minmax(50x, 1fr);
+  margin: 0 auto;
+  grid-template-areas:
+    "top-header top-header"
+    "side-text image-1"
+    "side-text image-2"
+    "side-text image-3"
+    "main-text main-text"
+    "bottom-banner bottom-banner"
+    "footer footer";
+}
+.top-header {
+  grid-area: top-header;
+  font-size: 2rem;
+  color: orange;
+}
+.home {
+  text-decoration: none;
+  float: right;
+  background-color: orange;
+  color: white;
+  padding: 0 2rem 0 2rem;
+  margin-top: 0.5rem;
+  margin-right: 5rem;
+  font-size: 1.2rem;
+  border-radius: 25rem;
+}
+.home:hover {
+  color: black;
+  background-color: white;
+  border: 2px black solid;
+}
+.top-header h3 {
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: orange 3px solid;
+}
+.side-text {
+  grid-area: side-text;
+  padding: 0 2em 0 2em;
+}
+.side-text p {
+  line-height: 1.5rem;
+}
+.side-text span {
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.image-1 {
+  grid-area: image-1;
+  margin-top: 1rem;
+}
+.image-1 img {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+}
+.image-2 {
+  grid-area: image-2;
+  margin-top: 1rem;
+}
+
+.image-2 img {
+  display: block;
+  width: 100%;
+  height: fit-content;
+}
+.image-3 {
+  grid-area: image-3;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.image-3 img {
+  display: block;
+  width: 100%;
+  height: fit-content;
+}
+.main-text {
+  grid-area: main-text;
+}
+.main-text h3 {
+  border-top: orange 3px solid;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  font-size: 2.1rem;
+  color: orange;
+}
+.main-text ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.5rem;
+}
+.main-text .left-text {
+  padding-right: 1rem;
+}
+.main-text .right-text {
+  padding-left: 1rem;
+}
+.bottom-banner {
+  background-color: #fa647d;
+  grid-area: bottom-banner;
+  color: white;
+}
+.bottom-banner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-banner .contact {
+  line-height: 0.5rem;
+  padding-left: 3rem;
+  padding-bottom: 1.5rem;
+}
+.bottom-banner .contact span {
+  font-size: 1.2rem;
+}
+.bottom-banner .contact a {
+  color: white;
+  text-decoration: none;
+}
+.bottom-banner .contact a:hover {
+  color: red;
+  background-color: white;
+}
+.logo h2 {
+  font-size: 2.2rem;
+  padding-bottom: 0em;
+  padding-right: 7rem;
+  margin-bottom: 0em;
+}
+.logo h2 .small {
+  font-size: 3rem;
+}
+.logo .living {
+  padding-left: 8rem;
+}
+.logo .statement {
+  font-size: 0.7rem;
+  padding-left: 1.5rem;
+}
+.button {
+  background-color: #fa647d;
+  color: white;
+  border: 2px solid white;
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: white;
+  border: 2px solid black;
+}
+.logo .footer {
+  background-color: orange;
+  grid-area: footer;
+  border: ;
+}
+.footer p {
+  color: green;
+  padding-left: 3rem;
+}
+@media screen and (max-width: 500px) {
+  .wrapper-container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-rows: minmax(50x, 1fr);
+    margin: 1rem 1rem 1rem;
+    grid-template-areas:
+      "top-header"
+      "side-text"
+      "image-1"
+      "image-2"
+      "image-3"
+      "main-text"
+      "bottom-banner"
+      "footer";
+  }
+  .main-text ul {
+    list-style: none;
+    display: block;
+    line-height: 1.5rem;
+  }
+  .main-text .left-text {
+    padding-right: 0rem;
+    text-align: justify;
+    margin-right: 1.5em;
+  }
+  .main-text .right-text {
+    padding: left 0;
+    margin-right: 1.5rem;
+    text-align: justify;
+  }
+
+  .bottom-banner ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 2rem;
+    display: block;
+    text-align: center;
+  }
+  .logo h2 {
+    font-size: 2.2rem;
+    padding-bottom: 0em;
+    padding-right: 0;
+    margin-bottom: 0em;
+  }
+}
